@@ -602,7 +602,7 @@ func (l *LoadBalancerOps) ReconcileHCLBTargets(
 		return changed, fmt.Errorf("%s: %w", op, err)
 	}
 	if privateIPEnabled && l.NetworkID == 0 {
-		return changed, fmt.Errorf("%s: use private ip: missing network id", op)
+		// return changed, fmt.Errorf("%s: use private ip: missing network id", op)
 	}
 
 	// Extract HC server IDs of all K8S nodes assigned to the K8S cluster.
